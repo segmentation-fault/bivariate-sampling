@@ -86,7 +86,7 @@ class BivariateExponentialType3(object):
         :param m (positive int): parameter m
         :param sampler: optional sampler
         """
-        assert(m > 0)
+        assert (m > 0)
         self.m = float(m)
         if not (sampler is None):
             self.sampler = deepcopy(sampler)
@@ -187,7 +187,7 @@ if __name__ == "__main__":
     fX, fY = np.meshgrid(fx, fy)
     f = fun(fX, fY)
 
-    #Plotting
+    # Plotting
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(X.ravel(), Y.ravel(), hist.ravel(), c='r', marker='x', label='sampling')
